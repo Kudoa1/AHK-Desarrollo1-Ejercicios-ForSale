@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #004a7c;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 2em;
+    margin: 0;
+    color: #ffffff; /* Color blanco para el título */
+}
+
+.navbar {
+    display: flex;
+    margin-top: 10px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.navbar a:hover {
+    background-color: #003a63;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #004a7c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #003a63;
+}
+
+
+.generic-button {
+    background-color: #004a7c; /* Color base */
+    color: #ffffff; /* Texto en blanco */
+    border: none;
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 4px; /* Bordes redondeados */
+    display: inline-block; /* No ocupa todo el ancho */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    text-align: center; /* Centra el texto */
+}
+
+.generic-button:hover {
+    background-color: #003a63; /* Color más oscuro al pasar el ratón */
+}
+
+.success-button {
+    background-color: #28a745; /* Verde para éxito */
+    color: #ffffff; /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block; /* Asegura que el botón no ocupe todo el ancho */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.success-button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #004a7c;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d1e0e0;
+}
+
+h1 {
+    text-align: center;
+    color: #004a7c;
+}

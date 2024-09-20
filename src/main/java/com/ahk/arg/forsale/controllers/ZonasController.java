@@ -59,7 +59,9 @@ public class ZonasController {
         return new ModelAndView("zonas_exito",model);
     }
     //opcion 2: Redirreccionar a una vista
-    public RedirectView guardarZona(){
+    @PostMapping("/guardar2")
+    public RedirectView guardarZona2(@ModelAttribute Zona zona){
+        this.zonas.add(zona);
         return new RedirectView("/zonas");
     }
 }

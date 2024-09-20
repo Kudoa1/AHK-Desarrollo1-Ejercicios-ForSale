@@ -45,8 +45,9 @@ public class ZonasController {
 
     // Mostrar el formulario de agregar zona
     @GetMapping("/agregarZona")
-    public ModelAndView mostrarFormularioAgregarZona() {
-        return new ModelAndView("agregarZona"); // nombre del archivo HTML para el formulario
+    public ModelAndView mostrarFormularioAgregarZona(Map<String, Object> model) {
+        model.put("title","Agregar-Zona");
+        return new ModelAndView("agregarZona",model); // nombre del archivo HTML para el formulario
     }
 
     //guardar Zona
@@ -55,6 +56,7 @@ public class ZonasController {
     public ModelAndView guardarZona(@ModelAttribute Zona zona, Map<String, Object> model){
         this.zonas.add(zona);   //agrego la zona a mi coleccion de zonas
         model.put("mensajeExito","Se guardó la zona con éxito!");
+        model.put("title","Agregar-Zona");
         // levantar la vista de exito (sin hacer get)
         return new ModelAndView("zonas_exito",model);
     }

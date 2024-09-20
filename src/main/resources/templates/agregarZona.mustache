@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Zona</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-
-<header>
-    <h1 class="header-title">Agregar Zona</h1>
-    <nav class="navbar">
-        <a href="/zonas">Listado de Zonas</a>
-        <a href="/inmuebles">Inmuebles</a>
-        <a href="/otros">Otros</a>
-    </nav>
-</header>
-
-<div class="container">
+{{#layout}}
     <h2>Formulario de Agregar Zona</h2>
-    <form action="/zonas/guardar2" method="post">
+    <form action="/zonas/guardar" method="post">
         <label for="id">ID:</label>
         <input type="number" id="id" name="id" required>
 
@@ -31,7 +12,5 @@
 
         <button type="submit">Guardar</button>
     </form>
-</div>
-
-</body>
-</html>
+{{/layout}}
+{{>layout}}

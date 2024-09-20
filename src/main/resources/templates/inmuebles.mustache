@@ -1,35 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="/css/styles.css"></head>
-<body>
-
-{{> header}}
-
-<div class="container">
-    <h1>Listado de Inmuebles</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>CantAmb</th>
-            <th>tm2</th>
-            <th>Zona</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#inmuebles}}
+{{#layout}}
+        <h1>Listado de Inmuebles</h1>
+        <table>
+            <thead>
             <tr>
-                <td>{{cantAmbientes}}</td>
-                <td>{{tamanioEnM2}}</td>
-                <td>{{zona.nombre}}</td>
+                <th>CantAmb</th>
+                <th>tm2</th>
+                <th>Zona</th>
             </tr>
-        {{/inmuebles}}
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+            {{#inmuebles}}
+                <tr>
+                    <td>{{cantAmbientes}}</td>
+                    <td>{{tamanioEnM2}}</td>
+                    <td>{{zona.nombre}}</td>
+                </tr>
+            {{/inmuebles}}
+            </tbody>
+        </table>
+{{/layout}}
 
-</body>
-</html>
+{{>layout}}
+
+

@@ -66,4 +66,12 @@ public class InmueblesController {
         return new ModelAndView("inmuebles",model);
     }
 
+    //Manejar navegacion (similar al navTo)
+    @GetMapping("/agregar")
+    public ModelAndView seleccionarInmuebles(Map<String, Object> model) {
+        model.put("title","Seleccionar tipo de Inmueble");
+        model.put("zonas", this.zonas);
+        return new ModelAndView("formularioCrearInmueble",model);
+    }
+
 }

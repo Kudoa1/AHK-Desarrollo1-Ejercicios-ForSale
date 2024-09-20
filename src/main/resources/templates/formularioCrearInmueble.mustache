@@ -1,0 +1,49 @@
+{{#layout}}
+    <h1>Seleccionar Tipo de Inmueble</h1>
+
+    <label for="tipoInmueble">Seleccione el tipo de inmueble:</label>
+    <select id="tipoInmueble" onchange="mostrarFormulario()">
+        <option value="">-- Seleccionar --</option>
+        <option value="casa">Casa</option>
+        <option value="departamento">Departamento</option>
+        <option value="ph">PH</option>
+    </select>
+
+    <div id="formulario" style="display: none; margin-top: 20px;">
+        <h2>Agregar Inmueble</h2>
+        <form action="/inmuebles/agregar" method="POST">
+            <label for="cantAmbientes">Cantidad de Ambientes:</label>
+            <input type="number" id="cantAmbientes" name="cantAmbientes" required>
+
+            <label for="tamanioEnM2">Tamaño en m²:</label>
+            <input type="number" id="tamanioEnM2" name="tamanioEnM2" required step="0.01">
+
+
+            <div id="valorCasa" style="display: none;">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" name="valor" required step="0.01">
+            </div>
+
+            <button type="submit">Guardar Inmueble</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function mostrarCamposEspecificos() {
+            document.getElementById("formulario").style.display="";
+
+            const valorTipoInmueble = document.getElementById('tipoInmueble').value;
+            const formulario = document.getElementById("formulario");
+
+            if(valorTipoInmueble===""){formulario.style.display="none";}
+
+
+            if(valorTipoInmueble==="casa"){
+                document.getElementById("valorCasa").style.display="";
+            }
+            else{document.getElementById("valorCasa").style.display="none";}
+        }
+    </script>
+{{/layout}}
+
+{{>layout}}

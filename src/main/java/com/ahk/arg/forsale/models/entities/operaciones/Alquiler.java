@@ -12,6 +12,11 @@ public class Alquiler extends Operacion{
     private Integer cantMeses;
 
     @Override
+    public String operacion() {
+        return "Alquiler";
+    }
+
+    @Override
     public Float calcularComisionPara(Empleado empleado) {
         Float comision= (this.cantMeses * super.inmueble.precioFinal()) / 50000;
         empleado.agregarComision(comision);

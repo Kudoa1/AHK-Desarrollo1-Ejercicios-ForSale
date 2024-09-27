@@ -3,17 +3,28 @@
         <table>
             <thead>
             <tr>
+                <th>Tipo</th>
                 <th>CantAmb</th>
                 <th>tm2</th>
                 <th>Zona</th>
+                <th>Operacion</th>
+                <th>Estado</th>
+                <th>Acciones</th>
             </tr>
             </thead>
             <tbody>
             {{#inmuebles}}
                 <tr>
+                    <td>{{tipo}}</td>
                     <td>{{cantAmbientes}}</td>
                     <td>{{tamanioEnM2}}</td>
                     <td>{{zona.nombre}}</td>
+                    <td>{{operacion.operacion}}</td>
+                    <td>{{operacion.estado.estadoOperacion}}</td>
+                    <td>
+                        <a href="/inmuebles/{{id}}/reservar"class="generic-button">Reservar</a>
+                        <a href="/inmuebles/{{id}}/concretar"class="generic-button">Concretar</a>
+                    </td>
                 </tr>
             {{/inmuebles}}
             </tbody>

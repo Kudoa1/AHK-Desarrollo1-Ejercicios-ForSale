@@ -9,6 +9,11 @@ public class Casa extends Inmueble{
     private Float valor;
 
     @Override
+    public String tipo() {
+        return "Casa";
+    }
+
+    @Override
     public Float precio() {
         return this.valor;
     }

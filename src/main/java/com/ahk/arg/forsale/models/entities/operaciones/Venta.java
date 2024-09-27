@@ -8,6 +8,12 @@ import lombok.Setter;
 @Getter
 public class Venta extends Operacion{
     static Float porcentajeComision=1.5F;
+
+    @Override
+    public String operacion() {
+        return "Venta";
+    }
+
     @Override
     public Float calcularComisionPara(Empleado empleado) {
         return super.inmueble.precioFinal() * Venta.porcentajeComision;

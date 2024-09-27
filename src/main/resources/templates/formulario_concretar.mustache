@@ -1,0 +1,24 @@
+{{#layout}}
+    <!-- Formulario para seleccionar un cliente -->
+    <form method="POST" action="/inmuebles/{{inmuebleId}}/concretar">
+        <label for="empleados">Selecciona un empleado:</label>
+        <select name="empleado_id">
+            {{# empleados}}
+                <option value="{{id}}">{{nombre}}</option>
+            {{/ empleados}}
+        </select>
+
+        <label for="clientes">Selecciona un cliente:</label>
+        <select name="cliente_id">>
+            {{# clientes}}
+                <option value="{{id}}">{{nombre}}</option>
+            {{/ clientes}}
+        </select>
+
+        <button type="submit">Reservar</button>
+    </form>
+
+{{/layout}}
+
+{{>layout}}
+
